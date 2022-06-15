@@ -36,8 +36,6 @@ public class Board {
      * @return the column played in
      */
     public int placeTile(int column, Tile tile) {
-        column--;
-
         if (!(0 <= column && column < width)) {
             System.out.println("column must be between 1 and " + width + " inclusive.");
             return -1;
@@ -62,6 +60,10 @@ public class Board {
         return board;
     }
 
+    public Tile getTile(int x, int y) {
+        return board[x][y];
+    }
+    
     public int getHeight() {
         return height;
     }

@@ -32,7 +32,7 @@ public class Player {
         int column = -1;
 
         while(column <= 0 || column > maxOption) {
-            System.out.printf("PLAYER %d\nPlace a tile between column 1 and %d.\n", id, maxOption);
+            System.out.printf("PLAYER %d\nPlace a tile between column 1 and %d.\n> ", id, maxOption);
             try {
                 column = Integer.parseInt(input.nextLine());
             }
@@ -41,6 +41,6 @@ public class Player {
             }
         }
 
-        return column;
+        return column - 1;
     }
 }
